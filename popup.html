@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ReadBox</title>
+        <link href="css/readbox_popup.css" rel="stylesheet">
+        <script src="/js/libs/jquery-2.1.3.min.js"></script>
+        <script src="/js/readbox_popup.js"></script>
+    </head>
+    <body>
+        <div class="loginContainer hide">
+            <div class="loginWrap">
+                <div class="container login" id="divLogin">
+                    <input type="text" placeholder="phone or email" id="loginname"/>
+                    <input type="password" placeholder="password" id="pwd"/>
+                    <button id="btnLogin">login</button>
+                    <button id="btnGotoRegister">register an account</button>
+                </div>
+                <div class="container login" id="divRegister">
+                    <input type="text" placeholder="phone or email" id="regLoginname"/>
+                    <input type="text" placeholder="nickname" id="nickname"/>
+                    <input type="password" placeholder="password" id="regPwd"/>
+                    <button id="btnRegister">register</button>
+                </div>
+                <span id="error"></span>
+            </div>
+        </div>
+        <div class="container loading hide" id="divPost">
+            <div class="loading-indicator">
+                =͟͟͞͞( •̀д•́)  Loading...
+            </div>
+        </div>
+    </body>
+</html>
