@@ -1,7 +1,8 @@
 /**
  * Created by leeshine on 15/1/30.
  */
-var rbBaseUrl = 'http://api.readbox.in';
+// var rbBaseUrl = 'http://api.readbox.in';
+var rbBaseUrl = 'http://readboxapi.tuishiben.com';
 var jwt = window.localStorage.getItem('readbox_jwt');
 function base64_encode(str) {
     var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
