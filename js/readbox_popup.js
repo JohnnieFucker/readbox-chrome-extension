@@ -226,7 +226,7 @@ $(document).ready(function () {
             if (isInConfig(nowPage.url)) {
                 msgPort.postMessage({action: "getDom"});
             } else {
-                addArticle(nowPage.url.source);
+                addArticle(nowPage);
             }
         } else {
             $('.loginContainer').show();
