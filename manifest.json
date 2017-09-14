@@ -1,28 +1,51 @@
 {
-   "name": "ReadBox",
-   "description": "the readbox extension for chrome.",
-   "manifest_version": 2,
-
-   "background": {
-      "persistent": true,
-      "scripts": ["js/libs/jquery-3.2.1.min.js"]
-   },
-   "browser_action": {
-      "default_icon": {
-        "19": "images/extension-icons/readboxlogo48.png",
-        "38": "images/extension-icons/readboxlogo48.png"
-      },
-      "default_popup": "popup.html",
-      "default_title": "ReadBox"
-   },
-
-   "icons": {
-      "128": "images/extension-icons/readboxlogo128.png",
-      "48": "images/extension-icons/readboxlogo48.png",
-      "16": "images/extension-icons/readboxlogo16.png"
-   },
-   "permissions": [ "tabs", "contextMenus", "storage", "cookies", "http://*/*", "https://*/*", "http://*.drea.mx/", "http://*.drea.mx/", "webRequest", "webRequestBlocking" ],
-   "version": "1.0.0",
-   "homepage_url":"https://github.com/JohnnieFucker/readbox-chrome-extension",
-   "web_accessible_resources": [ "popup.html"]
+  "name": "ReadBox",
+  "description": "the readbox extension for chrome.",
+  "manifest_version": 2,
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "js/libs/jquery-3.2.1.min.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": [
+        "js/libs/jquery-3.2.1.min.js",
+        "js/contentScripts.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "images/extension-icons/readboxlogo48.png",
+      "38": "images/extension-icons/readboxlogo48.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "ReadBox"
+  },
+  "icons": {
+    "128": "images/extension-icons/readboxlogo128.png",
+    "48": "images/extension-icons/readboxlogo48.png",
+    "16": "images/extension-icons/readboxlogo16.png"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "storage",
+    "cookies",
+    "http://*/*",
+    "https://*/*",
+    "http://*.drea.mx/",
+    "http://*.drea.mx/",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "version": "1.0.0",
+  "homepage_url": "https://github.com/JohnnieFucker/readbox-chrome-extension",
+  "web_accessible_resources": [
+    "popup.html"
+  ]
 }
